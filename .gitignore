@@ -1,2 +1,6 @@
 .history/
 *.py
+.claude/
+.omc/
+.venv/
+excalidraw.log
