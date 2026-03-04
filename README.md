@@ -1,0 +1,71 @@
+# F1 Fantasy Prediction Model
+
+A mathematical model for optimizing Formula 1 Fantasy team selections by converting bookmaker odds into expected value projections and solving for the optimal team using linear programming.
+
+## How It Works
+
+The model follows a pipeline:
+
+1. **Odds Ingestion** - Collect shortest decimal odds across 6 markets (winner, top3, top6, top10, fastest lap, DNF) and convert to implied probabilities with overround correction
+2. **Position Distributions** - Solve a quadratic program (Gurobi) per driver to produce smooth finishing position probability distributions (P1-P22) anchored to odds brackets
+3. **Race EV** - Calculate expected fantasy points from race positions, fastest lap, DNF penalty, and sprint races
+4. **Regression Models** - Fit historical data (2021-2025) to predict qualifying EV, Q2/Q3 appearance probability, and position gains using polynomial, logistic, and linear regression
+5. **Teammate Comparisons** - Estimate beat-teammate probabilities from season data with Bayesian shrinkage, adjusted for DNF scenarios
+6. **Streak Modelling** - Calculate expected value of qualifying and race streak bonuses
+7. **Team Optimization** - Solve an integer linear program (PuLP) to select the optimal 5 drivers + 2 constructors within the budget cap
+
+## Models
+
+| Notebook | Season | Grid |
+|----------|--------|------|
+| `f1-2026.ipynb` | 2026 | 22 drivers / 11 teams (new regulation era) |
+| `f1-2024.ipynb` | 2024 | 20 drivers / 10 teams |
+
+### 2026 Key Updates
+
+- 22-driver grid (Cadillac enters as 11th team, Sauber becomes Audi)
+- New power unit regulations (50/50 ICE/electric split)
+- Active aerodynamics replacing DRS
+- Updated Fantasy scoring (sprint DNF reduced to -10)
+- Pre-season teammate estimates from odds-derived position distributions
+
+## Data
+
+| File | Description |
+|------|-------------|
+| `odds_2026.csv` | Bookmaker odds for 2026 season (update before each race) |
+| `odds.csv` | Bookmaker odds (2024 format) |
+| `_prices.csv` | Fantasy driver/constructor prices |
+| `f1db_csv/` | Historical F1 database (results, qualifying, races, drivers, etc.) |
+
+## Usage
+
+```bash
+# Setup
+python3 -m venv .venv
+source .venv/bin/activate
+pip install gurobipy pulp scipy scikit-learn pandas numpy matplotlib seaborn unidecode
+
+# Run
+jupyter notebook f1-2026.ipynb
+```
+
+### Before Each Race
+
+1. Update `odds_2026.csv` with latest bookmaker decimal odds for all 22 drivers
+2. Update race URLs in the teammate comparison section as races complete
+3. Update streak driver lists based on current streak status
+4. Run all cells to get optimal team selection
+
+## Dependencies
+
+- **gurobipy** - Quadratic programming (position distributions)
+- **pulp** - Integer linear programming (team optimization)
+- **scipy** - Nonlinear optimization and curve fitting
+- **scikit-learn** - Linear regression
+- **pandas/numpy** - Data manipulation
+- **matplotlib/seaborn** - Visualization
+
+## Performance
+
+The 2024 model achieved **top 2.5% of global F1 Fantasy players** in its first season. Formal backtesting is not possible due to the high variance nature of F1 Fantasy and lack of historical fantasy data.
