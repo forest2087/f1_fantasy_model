@@ -1,23 +1,23 @@
 driver,team,winner,top3,top6,top10,flap,dnf
-Russell,Mercedes,2.75,1.4,1.07,1.05,3.4,12.0
-Verstappen,Red Bull,4.0,1.65,1.08,1.05,4.25,12.0
-Leclerc,Ferrari,4.5,1.75,1.12,1.07,4.25,12.0
-Hamilton,Ferrari,7.0,2.3,1.17,1.07,7.0,10.0
-Antonelli,Mercedes,7.5,2.5,1.22,1.08,8.0,10.0
-Norris,McLaren,8.0,2.5,1.3,1.12,7.0,14.0
-Piastri,McLaren,11.0,3.75,1.44,1.15,9.0,14.0
-Hadjar,Red Bull,67.0,8.5,2.5,1.4,15.0,10.0
-Gasly,Alpine,80.0,11.0,3.75,1.67,20.0,10.0
-Bearman,Haas,101.0,15.0,6.0,1.9,40.0,10.0
-Ocon,Haas,151.0,20.0,6.88,2.05,50.0,10.0
-Sainz,Williams,81.0,12.0,9.5,2.38,30.0,12.0
-Albon,Williams,74.0,10.0,11.0,2.6,25.0,12.0
-Alonso,Aston Martin,81.0,15.0,12.0,3.75,30.0,8.0
-Lawson,Racing Bulls,108.0,20.0,10.0,3.75,40.0,10.0
-Hulkenberg,Audi,108.0,25.0,8.0,3.0,40.0,9.0
-Bortoleto,Audi,235.0,50.0,10.0,3.0,80.0,8.0
-Colapinto,Alpine,201.0,40.0,15.0,2.75,60.0,9.0
-Lindblad,Racing Bulls,251.0,60.0,15.0,5.0,80.0,9.0
-Stroll,Aston Martin,251.0,50.0,36.0,8.0,80.0,8.0
-Perez,Cadillac,201.0,60.0,39.0,10.0,80.0,7.0
-Bottas,Cadillac,251.0,80.0,61.0,9.0,100.0,7.0
+Norris,McLaren,8.0,2.5,1.3,1.12,7.08,7.0
+Piastri,McLaren,11.0,3.75,1.44,1.17,9.23,7.0
+Russell,Mercedes,2.75,1.4,1.07,1.05,3.5,8.0
+Antonelli,Mercedes,7.5,2.5,1.22,1.08,8.0,8.0
+Verstappen,Red Bull,4.0,1.65,1.08,1.05,4.25,8.0
+Hadjar,Red Bull,67.0,8.5,2.5,1.4,31.0,8.0
+Leclerc,Ferrari,4.5,1.75,1.13,1.07,4.25,8.0
+Hamilton,Ferrari,7.0,2.3,1.17,1.07,7.0,8.0
+Albon,Williams,101.0,21.0,11.0,2.6,51.0,8.0
+Sainz,Williams,81.0,21.0,9.5,2.37,51.0,8.0
+Lawson,Racing Bulls,151.0,34.0,10.0,3.75,67.0,9.0
+Lindblad,Racing Bulls,251.0,34.0,15.0,5.0,67.0,9.0
+Alonso,Aston Martin,81.0,15.0,12.0,3.75,81.0,10.0
+Stroll,Aston Martin,251.0,34.0,34.0,8.0,126.0,10.0
+Bearman,Haas,101.0,13.0,6.0,1.9,51.0,9.0
+Ocon,Haas,151.0,21.0,6.88,2.05,67.0,9.0
+Hulkenberg,Audi,108.0,21.0,8.0,3.0,67.0,10.0
+Bortoleto,Audi,235.0,34.0,10.0,3.0,67.0,10.0
+Gasly,Alpine,61.0,11.0,3.75,1.67,46.0,9.0
+Colapinto,Alpine,201.0,21.0,15.0,2.75,101.0,9.0
+Perez,Cadillac,201.0,51.0,51.0,10.0,151.0,12.0
+Bottas,Cadillac,251.0,51.0,51.0,9.0,151.0,12.0

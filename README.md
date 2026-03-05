@@ -6,7 +6,7 @@ A mathematical model for optimizing Formula 1 Fantasy team selections by convert
 
 The model follows a pipeline:
 
-1. **Odds Ingestion** - Collect shortest decimal odds across 6 markets (winner, top3, top6, top10, fastest lap, DNF) and convert to implied probabilities with overround correction
+1. **Odds Ingestion** - Automatically scrape shortest decimal odds from Oddschecker across 5 markets (winner, top3, top6, top10, fastest lap) via Playwright, with DNF estimates by team reliability tier. Falls back to `odds_2026.csv` if scraping fails
 2. **Position Distributions** - Solve a quadratic program (Gurobi) per driver to produce smooth finishing position probability distributions (P1-P22) anchored to odds brackets
 3. **Race EV** - Calculate expected fantasy points from race positions, fastest lap, DNF penalty, and sprint races
 4. **Regression Models** - Fit historical data (2021-2025) to predict qualifying EV, Q2/Q3 appearance probability, and position gains using polynomial, logistic, and linear regression
@@ -33,9 +33,9 @@ The model follows a pipeline:
 
 | File | Description |
 |------|-------------|
-| `odds_2026.csv` | Bookmaker odds for 2026 season (update before each race) |
+| `odds_2026.csv` | Bookmaker odds for 2026 season (auto-updated by notebook scraper, or manual fallback) |
 | `odds.csv` | Bookmaker odds (2024 format) |
-| `_prices.csv` | Fantasy driver/constructor prices |
+| `_prices.csv` | Fantasy driver/constructor prices (auto-updated by notebook scraper, or manual fallback) |
 | `f1db_csv/` | Historical F1 database (results, qualifying, races, drivers, etc.) |
 
 ## Usage
@@ -45,6 +45,7 @@ The model follows a pipeline:
 python3 -m venv .venv
 source .venv/bin/activate
 pip install gurobipy pulp scipy scikit-learn pandas numpy matplotlib seaborn unidecode
+pip install playwright && playwright install chromium
 
 # Run
 jupyter notebook f1-2026.ipynb
@@ -52,10 +53,12 @@ jupyter notebook f1-2026.ipynb
 
 ### Before Each Race
 
-1. Update `odds_2026.csv` with latest bookmaker decimal odds for all 22 drivers
+1. Update `RACE_SLUG` in the odds scraper cell (e.g. `australian-grand-prix`, `chinese-grand-prix`) — odds and prices are scraped automatically when you run the notebook
 2. Update race URLs in the teammate comparison section as races complete
 3. Update streak driver lists based on current streak status
 4. Run all cells to get optimal team selection
+
+> **Note:** If Playwright is not installed or scraping fails, the notebook falls back to the existing `odds_2026.csv` and `_prices.csv` files. You can also update these CSVs manually.
 
 ## Dependencies
 
@@ -65,6 +68,7 @@ jupyter notebook f1-2026.ipynb
 - **scikit-learn** - Linear regression
 - **pandas/numpy** - Data manipulation
 - **matplotlib/seaborn** - Visualization
+- **playwright** - Browser automation for scraping odds from Oddschecker and prices from F1 Fantasy
 
 ## Performance
 
