@@ -1,8 +1,8 @@
 driver,team,winner,top3,top6,top10,flap,dnf
-Norris,McLaren,11.0,2.78,1.47,1.15,9.82,7.0
+Norris,McLaren,10.0,3.5,1.49,1.15,9.82,7.0
 Piastri,McLaren,501.0,125.25,40.08,1.17,11.0,7.0
-Russell,Mercedes,2.88,1.4,1.07,1.06,3.4,8.0
-Antonelli,Mercedes,8.5,2.27,1.22,1.11,9.0,8.0
+Russell,Mercedes,3.0,1.4,1.07,1.06,3.4,8.0
+Antonelli,Mercedes,501.0,2.18,1.22,1.11,9.0,8.0
 Verstappen,Red Bull,4.75,1.63,1.1,1.07,3.75,8.0
 Hadjar,Red Bull,67.0,11.0,2.7,1.44,29.0,8.0
 Leclerc,Ferrari,5.0,1.5,1.17,1.08,4.5,8.0
@@ -11,13 +11,13 @@ Albon,Williams,186.0,51.0,14.7,2.96,59.0,8.0
 Sainz,Williams,196.0,51.0,12.8,2.96,59.0,8.0
 Lawson,Racing Bulls,151.0,41.0,12.08,4.53,67.0,9.0
 Lindblad,Racing Bulls,501.0,67.0,40.08,15.03,81.0,9.0
-Alonso,Aston Martin,251.0,101.0,61.0,11.0,93.0,10.0
+Alonso,Aston Martin,251.0,101.0,61.0,10.0,93.0,10.0
 Stroll,Aston Martin,251.0,101.0,41.0,13.0,186.0,10.0
-Bearman,Haas,251.0,41.0,7.0,2.0,59.0,9.0
+Bearman,Haas,201.0,41.0,7.0,2.0,59.0,9.0
 Ocon,Haas,201.0,41.0,16.080000000000002,2.05,59.0,9.0
 Hulkenberg,Audi,167.0,41.0,9.0,5.01,67.0,10.0
 Bortoleto,Audi,245.0,41.0,19.6,7.35,67.0,10.0
 Gasly,Alpine,251.0,51.0,11.0,2.29,67.0,9.0
 Colapinto,Alpine,251.0,101.0,22.0,3.3,81.0,9.0
-Perez,Cadillac,251.0,251.0,51.0,12.8,151.0,12.0
-Bottas,Cadillac,251.0,251.0,61.0,12.8,151.0,12.0
+Perez,Cadillac,251.0,101.0,61.0,11.0,151.0,12.0
+Bottas,Cadillac,251.0,251.0,61.0,11.0,151.0,12.0

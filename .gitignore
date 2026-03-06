@@ -1,5 +1,7 @@
 .history/
-*.py
+# Legacy generated files
+__pycache__/
+*.pyc
 .claude/
 .omc/
 .venv/
