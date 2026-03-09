@@ -230,7 +230,7 @@ new_cs = []
 new_cr = []
 new_races = []
 
-for year in [2024, 2025]:
+for year in [2026]:  # 2024-2025 already in DB; add back when doing full refresh
     print(f"\n{'='*60}")
     print(f"Processing {year} season...")
     print(f"{'='*60}")
