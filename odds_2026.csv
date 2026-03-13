@@ -1,12 +1,12 @@
 driver,team,winner,top3,top6,top10,flap,dnf
-Norris,McLaren,29.0,8.0,2.5,1.25,13.0,7.0
-Piastri,McLaren,29.0,8.0,2.5,1.25,13.0,7.0
-Russell,Mercedes,1.80,1.29,1.06,1.02,2.5,9.0
-Antonelli,Mercedes,4.5,1.4,1.08,1.03,3.5,9.0
-Verstappen,Red Bull,9.0,2.25,1.18,1.08,5.0,8.0
-Hadjar,Red Bull,81.0,12.0,3.0,1.4,26.0,7.0
-Leclerc,Ferrari,6.5,1.75,1.1,1.04,3.5,8.0
-Hamilton,Ferrari,9.0,2.25,1.18,1.08,5.0,8.0
+Norris,McLaren,26.0,9.5,2.97,1.48,11.66,7.0
+Piastri,McLaren,26.0,9.5,2.97,1.48,11.66,7.0
+Russell,Mercedes,1.8,1.22,1.01,1.01,2.5,9.0
+Antonelli,Mercedes,5.5,1.44,1.11,1.06,4.28,9.0
+Verstappen,Red Bull,9.0,2.1,1.1,1.01,5.0,8.0
+Hadjar,Red Bull,29.0,7.5,1.88,1.01,9.31,7.0
+Leclerc,Ferrari,7.0,1.61,1.01,1.01,3.77,8.0
+Hamilton,Ferrari,8.5,2.25,1.18,1.08,4.72,8.0
 Albon,Williams,1501.0,201.0,41.0,8.0,301.0,8.0
 Sainz,Williams,2001.0,251.0,51.0,10.0,401.0,8.0
 Lawson,Racing Bulls,301.0,41.0,7.0,1.8,82.0,8.0
