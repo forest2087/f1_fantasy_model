@@ -250,6 +250,9 @@ for year in [2026]:  # 2024-2025 already in DB; add back when doing full refresh
     # Process race schedule - assign raceIds
     year_race_ids = {}  # round -> raceId
     for race in races:
+        if "round" not in race:
+            print(f"  Skipping {race.get('raceName', 'unknown')} (no round - likely cancelled)")
+            continue
         rnd = int(race["round"])
         circuit_id = get_or_create_circuit(race["Circuit"])
 
