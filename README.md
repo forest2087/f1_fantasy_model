@@ -70,6 +70,33 @@ jupyter notebook f1-2026.ipynb
 - **matplotlib/seaborn** - Visualization
 - **playwright** - Browser automation for scraping odds from Oddschecker and prices from F1 Fantasy
 
+## Current Top Picks (Japanese GP, Round 3)
+
+**Top EV Drivers:**
+
+| Driver | EV | Price | EV/$M |
+|--------|---:|------:|------:|
+| Russell | 55.7 | $28.0M | 1.99 |
+| Antonelli | 50.8 | $23.8M | 2.13 |
+| Hamilton | 44.1 | $22.9M | 1.92 |
+| Leclerc | 43.9 | $23.4M | 1.88 |
+| Bearman | 18.4 | $8.6M | 2.14 |
+| Gasly | 18.4 | $12.8M | 1.44 |
+| Hadjar | 17.9 | $13.9M | 1.29 |
+
+**Top EV Constructors:**
+
+| Constructor | EV | Price | EV/$M |
+|-------------|---:|------:|------:|
+| Mercedes | 86.5 | $29.9M | 2.89 |
+| Ferrari | 68.0 | $23.9M | 2.85 |
+| Haas | 14.6 | $8.6M | 1.70 |
+| Racing Bulls | 9.4 | $7.5M | 1.25 |
+
+**Best value picks:** Bearman (2.14 EV/$M), Antonelli (2.13), Mercedes (2.89), Ferrari (2.85). Budget fillers: Hulkenberg ($5.6M), Bottas ($4.7M), Perez ($6.4M).
+
+**Optimal unconstrained team (budget ~$103M):** Antonelli, Bearman, Hulkenberg, Perez, Bottas + Mercedes, Ferrari = **287 EV**. Turbo: Antonelli.
+
 ## Performance
 
 The 2024 model achieved **top 2.5% of global F1 Fantasy players** in its first season. Formal backtesting is not possible due to the high variance nature of F1 Fantasy and lack of historical fantasy data.
