@@ -2,7 +2,8 @@
 # Legacy generated files
 __pycache__/
 *.pyc
-.claude/
+.claude/*
+!.claude/skills/
 .omc/
 .venv/
 excalidraw.log
