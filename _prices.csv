@@ -1,34 +1,34 @@
 driver,team,price,is_constructor
-Verstappen,Red Bull,28.1,0
-Russell,Mercedes,28.0,0
-Norris,McLaren,26.8,0
-Piastri,McLaren,24.9,0
-Antonelli,Mercedes,23.8,0
-Leclerc,Ferrari,23.4,0
-Hamilton,Ferrari,22.9,0
-Hadjar,Red Bull,13.9,0
-Gasly,Alpine,12.8,0
-Sainz,Williams,12.2,0
-Albon,Williams,10.8,0
-Alonso,Aston Martin,8.8,0
-Bearman,Haas,8.6,0
-Ocon,Haas,8.5,0
-Lindblad,Racing Bulls,7.4,0
-Colapinto,Alpine,7.0,0
-Lawson,Racing Bulls,6.9,0
-Stroll,Aston Martin,6.8,0
-Bortoleto,Audi,6.4,0
-Perez,Cadillac,6.4,0
-Hulkenberg,Audi,5.6,0
-Bottas,Cadillac,4.7,0
-Mercedes,,29.9,1
-Red Bull,,28.8,1
-McLaren,,28.5,1
-Ferrari,,23.9,1
-Alpine,,13.7,1
-Williams,,13.2,1
-Aston Martin,,9.1,1
-Haas,,8.6,1
-Racing Bulls,,7.5,1
-Audi,,5.4,1
-Cadillac,,5.2,1
+Russell,Mercedes,28.3,0
+Verstappen,Red Bull,28.2,0
+Norris,McLaren,26.5,0
+Piastri,McLaren,24.6,0
+Antonelli,Mercedes,24.1,0
+Leclerc,Ferrari,23.7,0
+Hamilton,Ferrari,23.2,0
+Hadjar,Red Bull,13.3,0
+Gasly,Alpine,13.0,0
+Sainz,Williams,12.4,0
+Albon,Williams,10.2,0
+Bearman,Haas,9.2,0
+Ocon,Haas,9.1,0
+Alonso,Aston Martin,8.2,0
+Colapinto,Alpine,7.6,0
+Lindblad,Racing Bulls,7.6,0
+Lawson,Racing Bulls,7.5,0
+Perez,Cadillac,7.0,0
+Stroll,Aston Martin,6.2,0
+Bortoleto,Audi,5.8,0
+Hulkenberg,Audi,5.0,0
+Bottas,Cadillac,4.5,0
+Mercedes,,30.2,1
+Red Bull,,29.1,1
+McLaren,,28.6,1
+Ferrari,,24.2,1
+Alpine,,14.3,1
+Williams,,13.8,1
+Haas,,9.2,1
+Aston Martin,,8.5,1
+Racing Bulls,,8.1,1
+Audi,,5.6,1
+Cadillac,,5.4,1
