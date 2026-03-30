@@ -97,6 +97,10 @@ races_header, races_data = read_csv_file("races.csv")
 existing_race_ids = {int(r[0]) for r in races_data}
 max_race_id = max(existing_race_ids) if existing_race_ids else 0
 
+# Build set of raceIds that already have results (to avoid re-appending)
+existing_results_race_ids = {int(r[1]) for r in results_data}
+existing_quali_race_ids = {int(r[1]) for r in quali_data}
+
 _, ds_data = read_csv_file("driver_standings.csv")
 max_ds_id = max(int(r[0]) for r in ds_data) if ds_data else 0
 
@@ -108,6 +112,9 @@ max_cr_id = max(int(r[0]) for r in cr_data) if cr_data else 0
 
 _, sprint_data = read_csv_file("sprint_results.csv")
 max_sprint_id = max(int(r[0]) for r in sprint_data) if sprint_data else 0
+existing_sprint_race_ids = {int(r[1]) for r in sprint_data}
+existing_ds_race_ids = {int(r[1]) for r in ds_data}
+existing_cs_race_ids = {int(r[1]) for r in cs_data}
 
 drivers_header, drivers_data = read_csv_file("drivers.csv")
 max_driver_id = max(int(r[0]) for r in drivers_data) if drivers_data else 0
@@ -320,6 +327,8 @@ for year in [2026]:  # 2024-2025 already in DB; add back when doing full refresh
         if not race_id:
             print(f"  WARNING: No raceId for round {rnd}")
             continue
+        if race_id in existing_results_race_ids:
+            continue  # Skip races that already have results
 
         for result in race.get("Results", []):
             max_result_id += 1
@@ -372,6 +381,8 @@ for year in [2026]:  # 2024-2025 already in DB; add back when doing full refresh
         race_id = year_race_ids.get(rnd)
         if not race_id:
             continue
+        if race_id in existing_quali_race_ids:
+            continue  # Skip races that already have qualifying
 
         for result in race.get("QualifyingResults", []):
             max_qualify_id += 1
@@ -406,6 +417,8 @@ for year in [2026]:  # 2024-2025 already in DB; add back when doing full refresh
         race_id = year_race_ids.get(rnd)
         if not race_id:
             continue
+        if race_id in existing_sprint_race_ids:
+            continue  # Skip races that already have sprint results
 
         for result in race.get("SprintResults", []):
             max_sprint_id += 1
@@ -434,6 +447,8 @@ for year in [2026]:  # 2024-2025 already in DB; add back when doing full refresh
     print(f"\nFetching {year} driver standings...")
     for rnd in sorted(year_race_ids.keys()):
         race_id = year_race_ids[rnd]
+        if race_id in existing_ds_race_ids:
+            continue  # Skip rounds that already have standings
         try:
             data = fetch_json(f"{BASE_URL}/{year}/{rnd}/driverStandings.json")
             standings = data["MRData"]["StandingsTable"]["StandingsLists"]
@@ -455,6 +470,8 @@ for year in [2026]:  # 2024-2025 already in DB; add back when doing full refresh
     print(f"\nFetching {year} constructor standings...")
     for rnd in sorted(year_race_ids.keys()):
         race_id = year_race_ids[rnd]
+        if race_id in existing_cs_race_ids:
+            continue  # Skip rounds that already have standings
         try:
             data = fetch_json(f"{BASE_URL}/{year}/{rnd}/constructorStandings.json")
             standings = data["MRData"]["StandingsTable"]["StandingsLists"]
